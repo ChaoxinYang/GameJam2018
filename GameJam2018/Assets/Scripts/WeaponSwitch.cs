@@ -5,11 +5,12 @@ using UnityEngine;
 public class WeaponSwitch : MonoBehaviour {
     private bool isSwitching, doneSwitching;
     private Vector3 leftPosition, rightPosition;
-    public GameObject leftWeapon, rightWeapon;
+    public Weapon leftWeapon, rightWeapon;
+    public Sprite weaponSprite0, weaponSprite1;
 
 	void Start () {
-        leftPosition = leftWeapon.transform.position;
-        rightPosition = rightWeapon.transform.position;
+        leftPosition = leftWeapon.gameObject.transform.position;
+        rightPosition = rightWeapon.gameObject.transform.position;
         isSwitching = false;
         doneSwitching = false;
 	}
@@ -24,22 +25,36 @@ public class WeaponSwitch : MonoBehaviour {
         {
             if (doneSwitching == false)
             {
-                leftWeapon.transform.position = Vector3.MoveTowards(leftWeapon.transform.position, transform.position, Time.deltaTime);
-                rightWeapon.transform.position = Vector3.MoveTowards(rightWeapon.transform.position, transform.position, Time.deltaTime);
+                leftWeapon.gameObject.transform.position = Vector3.MoveTowards(leftWeapon.gameObject.transform.position, transform.position, Time.deltaTime);
+                rightWeapon.gameObject.transform.position = Vector3.MoveTowards(rightWeapon.gameObject.transform.position, transform.position, Time.deltaTime);
             }
             else
             {
-                leftWeapon.transform.position = Vector3.MoveTowards(leftWeapon.transform.position, leftPosition, Time.deltaTime);
-                rightWeapon.transform.position = Vector3.MoveTowards(rightWeapon.transform.position, rightPosition, Time.deltaTime);
+                leftWeapon.gameObject.transform.position = Vector3.MoveTowards(leftWeapon.gameObject.transform.position, leftPosition, Time.deltaTime);
+                rightWeapon.gameObject.transform.position = Vector3.MoveTowards(rightWeapon.gameObject.transform.position, rightPosition, Time.deltaTime);
             }
         }
 
-        if (leftWeapon.transform.position == transform.position)
+        if (leftWeapon.gameObject.transform.position == transform.position)
         {
+            if (leftWeapon.weaponState == 0)
+            {
+                leftWeapon.weaponState = 1;
+                rightWeapon.weaponState = 0;
+                leftWeapon.gameObject.GetComponent<SpriteRenderer>().sprite = weaponSprite1;
+                rightWeapon.gameObject.GetComponent<SpriteRenderer>().sprite = weaponSprite0;
+            }
+            else
+            {
+                leftWeapon.weaponState = 0;
+                rightWeapon.weaponState = 1;
+                leftWeapon.gameObject.GetComponent<SpriteRenderer>().sprite = weaponSprite0;
+                rightWeapon.gameObject.GetComponent<SpriteRenderer>().sprite = weaponSprite1;
+            }
             doneSwitching = true;
         }
 
-        if (leftWeapon.transform.position == leftPosition && doneSwitching == true)
+        if (leftWeapon.gameObject.transform.position == leftPosition && doneSwitching == true)
         {
             isSwitching = false;
             doneSwitching = false;
