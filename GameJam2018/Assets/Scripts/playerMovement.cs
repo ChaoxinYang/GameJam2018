@@ -16,7 +16,22 @@ public class playerMovement : MonoBehaviour {
         rotPlayer1 = 0f;
         rotPlayer2 = 180f;
 	}
-	
+
+	void Update(){
+
+		if (Input.GetKey(KeyCode.W)){
+
+		player1.GetComponent<Weapon>().Fire();
+
+		}
+		if (Input.GetKey(KeyCode.UpArrow)){
+
+		player2.GetComponent<Weapon>().Fire();
+
+		}
+	}
+
+
 	// Update is called once per frame
 	void FixedUpdate () {
         //player1 rotation

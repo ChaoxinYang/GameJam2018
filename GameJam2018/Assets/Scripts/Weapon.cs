@@ -7,7 +7,8 @@ public class Weapon : MonoBehaviour {
     public float weaponCooldown;
     public GameObject bullet;
     private bool canShoot;
-    
+
+
     void Start()
     {
         canShoot = true;
@@ -28,7 +29,7 @@ public class Weapon : MonoBehaviour {
         {
             canShoot = false;
             GameObject newBullet = Instantiate(bullet, transform.position, transform.rotation);
-            newBullet.GetComponent<Rigidbody2D>().AddForce((transform.right * Mathf.Sign(transform.position.x)) * bulletSpeed);
+            newBullet.GetComponent<Rigidbody2D>().AddForce(-transform.right * bulletSpeed);
             StartCoroutine("WeaponCooldown");
         }
 	}

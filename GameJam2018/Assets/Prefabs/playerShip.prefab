@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4420295469039138}
   - component: {fileID: 212170062167555626}
+  - component: {fileID: 114243407754693386}
   m_Layer: 0
   m_Name: player1
   m_TagString: Player
@@ -39,6 +40,7 @@ GameObject:
   - component: {fileID: 114396066721235924}
   - component: {fileID: 50737153728881900}
   - component: {fileID: 58066549168293890}
+  - component: {fileID: 114525686059523068}
   m_Layer: 0
   m_Name: playerShip
   m_TagString: PlayerShip
@@ -55,6 +57,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4879049722073726}
   - component: {fileID: 212793869370349806}
+  - component: {fileID: 114728607992507994}
   m_Layer: 0
   m_Name: player2
   m_TagString: Player
@@ -138,6 +141,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.28
+--- !u!114 &114243407754693386
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1290710793687550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 199d37efde33a324484213c77c368dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponState: 0
+  bulletSpeed: 1000
+  weaponCooldown: 0.1
+  bullet: {fileID: 0}
 --- !u!114 &114396066721235924
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -146,12 +164,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 1577366077304994}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd80d07daf433484485253f3643b7afa, type: 3}
+  m_Script: {fileID: 11500000, guid: ddae515d9185c60419971cae039b8cf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rotPlayer1: 0
   rotPlayer2: 0
   rotationSpeed: 1
+--- !u!114 &114525686059523068
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1577366077304994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b650c3046b18acc449366cad8ee1c4aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftWeapon: {fileID: 114243407754693386}
+  rightWeapon: {fileID: 114728607992507994}
+  weaponSprite0: {fileID: 21300000, guid: 14ca26bf636e6f644bab2fb9e945f164, type: 3}
+  weaponSprite1: {fileID: 21300000, guid: a28d2f3927d6eca4996224333153920b, type: 3}
+--- !u!114 &114728607992507994
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1948873540003120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 199d37efde33a324484213c77c368dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponState: 1
+  bulletSpeed: 1000
+  weaponCooldown: 0.5
+  bullet: {fileID: 0}
 --- !u!212 &212170062167555626
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -161,6 +209,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -176,6 +225,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -203,6 +253,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -218,6 +269,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -245,6 +297,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -260,6 +313,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5

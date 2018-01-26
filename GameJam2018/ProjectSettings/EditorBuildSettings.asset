@@ -11,6 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Score-Max.unity
     guid: 6f82816b7d9d5914dbe0023476031be4
-  - enabled: 1
-    path: Assets/Scenes/Main.unity
-    guid: 31788126762795247a2aee37725a091d
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000

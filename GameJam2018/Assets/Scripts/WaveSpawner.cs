@@ -26,7 +26,7 @@ public class WaveSpawner : MonoBehaviour {
             GameObject formation = ObjectPool.objectPool.GetPooledObjct(availableFormations[FormationSpawnOrder[currentWave]].waveToSpawn, true);
             formation.transform.position = availableFormations[FormationSpawnOrder[currentWave]].waveSpawnPoint;
             formation.SetActive(true);
-            if(currentWave < FormationSpawnOrder.Length)
+            if(currentWave < FormationSpawnOrder.Length-1)
             currentWave++;
         }
 
