@@ -2,22 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponSwitch : MonoBehaviour {
-    private bool isSwitching, doneSwitching;
+public class WeaponSwitch : MonoBehaviour
+{
+    public bool isSwitching, doneSwitching;
     private Vector3 leftPosition, rightPosition;
     public Weapon leftWeapon, rightWeapon;
     public Sprite weaponSprite0, weaponSprite1;
 
-	void Start () {
-        leftPosition = leftWeapon.gameObject.transform.position;
-        rightPosition = rightWeapon.gameObject.transform.position;
+    void Start()
+    {
         isSwitching = false;
         doneSwitching = false;
-	}
+    }
 
-	void Update () {
-		if ((Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) && isSwitching == false)
+    void Update()
+    {
+        if ((Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) && isSwitching == false)
         {
+            gameObject.GetComponent<playerMovement>().enabled = false;
+            leftPosition = leftWeapon.gameObject.transform.position;
+            rightPosition = rightWeapon.gameObject.transform.position;
             isSwitching = true;
         }
 
@@ -30,6 +34,7 @@ public class WeaponSwitch : MonoBehaviour {
             }
             else
             {
+                Debug.Log("Hier moet");
                 leftWeapon.gameObject.transform.position = Vector3.MoveTowards(leftWeapon.gameObject.transform.position, leftPosition, Time.deltaTime);
                 rightWeapon.gameObject.transform.position = Vector3.MoveTowards(rightWeapon.gameObject.transform.position, rightPosition, Time.deltaTime);
             }
@@ -56,8 +61,9 @@ public class WeaponSwitch : MonoBehaviour {
 
         if (leftWeapon.gameObject.transform.position == leftPosition && doneSwitching == true)
         {
+            gameObject.GetComponent<playerMovement>().enabled = true;
             isSwitching = false;
             doneSwitching = false;
         }
-	}
+    }
 }
