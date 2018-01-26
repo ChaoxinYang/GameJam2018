@@ -4,25 +4,25 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour {
     public int weaponState, bulletSpeed;
-    public float weaponCooldown;
-    public GameObject bullet;
+    private float weaponCooldown;
     private bool canShoot;
-
 
     void Start()
     {
         canShoot = true;
     }
 
-    /*
-    private void Update()
+    void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (weaponState == 0)
         {
-            Fire();
+            weaponCooldown = 0.1f;
+        }
+        else if (weaponState == 1)
+        {
+            weaponCooldown = 2f;
         }
     }
-    */
 
     public void Fire() {
         if (canShoot == true)
