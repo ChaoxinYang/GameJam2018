@@ -5,17 +5,23 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HealthScript : MonoBehaviour {
-	public int health = 500;
+	public float maxHealth = 500;
+	public float currenthealth;
+
+	public Slider healthBar;
 
 	private Text myText;
 	// Use this for initialization
 	void Start () {
+		currenthealth = maxHealth;
 		myText = GetComponent<Text>();
+
+		healthBar.value = calculateHealth();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(health <= 0){
+		if(currenthealth <= 0){
 			string currentScene = SceneManager.GetActiveScene().name;
 			SceneManager.LoadScene(currentScene);
 			ScoreKeeper.Reset();
@@ -25,8 +31,13 @@ public class HealthScript : MonoBehaviour {
 		}
 	}
 
+	float calculateHealth(){
+		return currenthealth / maxHealth;
+	}
+
 	public void Damage(int hitPoints){
-		health -= hitPoints;
-		myText.text = health.ToString();
+		currenthealth -= hitPoints;
+		myText.text = currenthealth.ToString();
+		healthBar.value = calculateHealth();
 	}
 }
