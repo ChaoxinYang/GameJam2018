@@ -28,7 +28,9 @@ public class Weapon : MonoBehaviour {
         if (canShoot == true)
         {
             canShoot = false;
-            GameObject newBullet = Instantiate(bullet, transform.position, transform.rotation);
+            GameObject newBullet = ObjectPool.objectPool.GetPooledObjct("Bullet", true);
+            newBullet.SetActive(true);
+            newBullet.transform.position = gameObject.transform.position;
             newBullet.GetComponent<Rigidbody2D>().AddForce(-transform.right * bulletSpeed);
             StartCoroutine("WeaponCooldown");
         }

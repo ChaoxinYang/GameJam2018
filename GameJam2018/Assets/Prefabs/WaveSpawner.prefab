@@ -53,9 +53,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poolableGameObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  pooledAmount: 0100000001000000
+  - {fileID: 1478562973300502, guid: cf71207231b24f74185ba45905ebcc8e, type: 2}
+  - {fileID: 1079415743920536, guid: 0da16dd7ba90ab74c9121db66a4eb293, type: 2}
+  - {fileID: 1043772038336532, guid: f3b1fee2efcd4434c922179b77c7b8de, type: 2}
+  pooledAmount: 010000000100000064000000
 --- !u!114 &114770166995055890
 MonoBehaviour:
   m_ObjectHideFlags: 1
