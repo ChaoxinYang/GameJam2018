@@ -37,7 +37,6 @@ public class HealthScript : MonoBehaviour {
 
 	public void Damage(int hitPoints){
 		currenthealth -= hitPoints;
-		myText.text = currenthealth.ToString();
 		healthBar.value = calculateHealth();
 	}
 }
