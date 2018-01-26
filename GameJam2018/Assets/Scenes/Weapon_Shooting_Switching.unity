@@ -310,6 +310,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponState: 1
+  bulletSpeed: 1000
+  weaponCooldown: 2
+  bullet: {fileID: 1043772038336532, guid: f3b1fee2efcd4434c922179b77c7b8de, type: 2}
 --- !u!1001 &1066508752
 Prefab:
   m_ObjectHideFlags: 0
@@ -525,3 +528,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponState: 0
+  bulletSpeed: 1000
+  weaponCooldown: 0.5
+  bullet: {fileID: 1043772038336532, guid: f3b1fee2efcd4434c922179b77c7b8de, type: 2}

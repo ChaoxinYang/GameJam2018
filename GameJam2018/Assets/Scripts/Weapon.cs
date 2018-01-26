@@ -3,16 +3,39 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour {
-    public int weaponState;
-	
-	public void Fire () {
-		if (weaponState == 0)
+    public int weaponState, bulletSpeed;
+    public float weaponCooldown;
+    public GameObject bullet;
+    private bool canShoot;
+    
+    void Start()
+    {
+        canShoot = true;
+    }
+
+    /*
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            // Behaviour for weapon state 0.
+            Fire();
         }
-        else if (weaponState == 1)
+    }
+    */
+
+    public void Fire() {
+        if (canShoot == true)
         {
-            // Behaviour for weapon state 1.
+            canShoot = false;
+            GameObject newBullet = Instantiate(bullet, transform.position, transform.rotation);
+            newBullet.GetComponent<Rigidbody2D>().AddForce((transform.right * Mathf.Sign(transform.position.x)) * bulletSpeed);
+            StartCoroutine("WeaponCooldown");
         }
 	}
+
+    IEnumerator WeaponCooldown()
+    {
+        yield return new WaitForSeconds(weaponCooldown);
+        canShoot = true;
+    }
 }
