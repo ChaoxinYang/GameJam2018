@@ -19,6 +19,9 @@ public class playerMovement : MonoBehaviour {
         rotPlayer1 = 0f;
         rotPlayer2 = 180f;
 
+        rotationSpeed1 = 0f;
+        rotationSpeed2 = 0f;
+
         playerAudio = gameObject.GetComponent<AudioSource>();
 
         metalParticle = GameObject.Find("MetalParticle");
@@ -26,16 +29,14 @@ public class playerMovement : MonoBehaviour {
 
 	void Update(){
 
-		if (Input.GetKey(KeyCode.W)){
-
-		player1.GetComponent<Weapon>().Fire();
-
-		}
-		if (Input.GetKey(KeyCode.UpArrow)){
-
-		player2.GetComponent<Weapon>().Fire();
-
-		}
+        if (Input.GetKey(KeyCode.W))
+        {
+            player1.GetComponent<Weapon>().Fire();
+        }
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            player2.GetComponent<Weapon>().Fire();
+        }
 	}
 
 
@@ -70,8 +71,6 @@ public class playerMovement : MonoBehaviour {
         {
             rotationSpeed1 = -1f;
         }
-
-        Debug.Log(rotationSpeed1);
 
         //player2 rotation
         if (Input.GetKey(KeyCode.LeftArrow))
