@@ -133,3 +133,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuClip: {fileID: 8300000, guid: 4ceb42496094f2848b47a8d413e05b43, type: 3}
+  backgroundClip: {fileID: 8300000, guid: 6af83ad91a5183041b8ecbb52cb373d4, type: 3}

@@ -17,11 +17,11 @@ public class Weapon : MonoBehaviour
     {
         if (weaponState == 0)
         {
-            weaponCooldown = 0.1f;
+            weaponCooldown = 0.05f;
         }
         else if (weaponState == 1)
         {
-            weaponCooldown = 2f;
+            weaponCooldown = .4f;
         }
     }
 

@@ -6,6 +6,7 @@ public class MusicPlayer : MonoBehaviour {
 	static MusicPlayer instance = null;
 
 	public AudioClip menuClip;
+	public AudioClip backgroundClip;
 
 	private AudioSource music;
 	// Use this for initialization
@@ -27,6 +28,9 @@ public class MusicPlayer : MonoBehaviour {
 
 		if(level == 1){
 			music.clip = menuClip;
+		}
+		if(level == 2){
+			music.clip = backgroundClip;
 		}
 		music.loop = true;
 		music.Play();
