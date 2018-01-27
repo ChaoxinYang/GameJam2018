@@ -380,6 +380,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyType: 0
   enemySpeed: 0
+  range: 0
 --- !u!114 &114242625142825616
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -405,6 +406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyType: 0
   enemySpeed: 0
+  range: 0
 --- !u!114 &114356395060358414
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -418,6 +420,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyType: 0
   enemySpeed: 0
+  range: 0
 --- !u!114 &114413957572425218
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -441,8 +444,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5651d6fa6d6f27046b18764178706708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyType: 0
+  enemyType: 1
   enemySpeed: 0
+  range: 0
 --- !u!114 &114891765006957676
 MonoBehaviour:
   m_ObjectHideFlags: 1

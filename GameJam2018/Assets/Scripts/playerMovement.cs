@@ -10,6 +10,8 @@ public class playerMovement : MonoBehaviour {
     GameObject player1, player2;
     AudioSource playerAudio;
 
+    public float playerSpeed = 1.5f;
+
     private GameObject metalParticle;
     // Use this for initialization
     void Start () {
@@ -63,13 +65,13 @@ public class playerMovement : MonoBehaviour {
         }
         rotPlayer1 = Mathf.Clamp(rotPlayer1, -90f, 90f);
 
-        if (rotationSpeed1 > 1f)
+		if (rotationSpeed1 > playerSpeed)
         {
-            rotationSpeed1 = 1f;
+			rotationSpeed1 = playerSpeed;
         }
-        else if (rotationSpeed1 < -1f)
+		else if (rotationSpeed1 < -playerSpeed)
         {
-            rotationSpeed1 = -1f;
+			rotationSpeed1 = -playerSpeed;
         }
 
         //player2 rotation
@@ -92,13 +94,13 @@ public class playerMovement : MonoBehaviour {
             rotationSpeed2 -= 0.25f * Mathf.Sign(rotationSpeed2);
         }
 
-        if (rotationSpeed2 > 1f)
+		if (rotationSpeed2 > playerSpeed)
         {
-            rotationSpeed2 = 1f;
+			rotationSpeed2 = playerSpeed;
         }
-        else if (rotationSpeed2 < -1f)
+		else if (rotationSpeed2 < -playerSpeed)
         {
-            rotationSpeed2 = -1f;
+			rotationSpeed2 = -playerSpeed;
         }
 
         if (!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.RightArrow)) {
