@@ -24,7 +24,7 @@ public class MusicPlayer : MonoBehaviour {
 	}
 
 	void OnLevelWasLoaded(int level){
-		music.Stop();
+		//music.Stop();
 
 		if(level == 1){
 			music.clip = menuClip;
