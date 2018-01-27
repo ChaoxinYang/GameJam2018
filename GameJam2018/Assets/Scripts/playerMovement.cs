@@ -8,6 +8,7 @@ public class playerMovement : MonoBehaviour {
     public float rotPlayer2;
     public float rotationSpeed = 1f;
     GameObject player1, player2;
+    AudioSource playerAudio;
 
     private GameObject metalParticle;
     // Use this for initialization
@@ -18,7 +19,9 @@ public class playerMovement : MonoBehaviour {
         rotPlayer1 = 0f;
         rotPlayer2 = 180f;
 
-		metalParticle = GameObject.Find("MetalParticle");
+        playerAudio = gameObject.GetComponent<AudioSource>();
+
+        metalParticle = GameObject.Find("MetalParticle");
 	}
 
 	void Update(){
@@ -41,22 +44,30 @@ public class playerMovement : MonoBehaviour {
         //player1 rotation
         if (Input.GetKey(KeyCode.A)){
         	rotPlayer1+= rotationSpeed;
-			Instantiate(metalParticle, player1.transform.position, Quaternion.identity);
+            PlaySound(playerAudio);
+            Instantiate(metalParticle, player1.transform.position, Quaternion.identity);
         }
-        if (Input.GetKey(KeyCode.D)){
+        else if (Input.GetKey(KeyCode.D)){
         	rotPlayer1-= rotationSpeed;
-			Instantiate(metalParticle, player1.transform.position, Quaternion.identity);
+            PlaySound(playerAudio);
+            Instantiate(metalParticle, player1.transform.position, Quaternion.identity);
         }
         rotPlayer1 = Mathf.Clamp(rotPlayer1, -90f, 90f);
 
         //player2 rotation
         if (Input.GetKey(KeyCode.LeftArrow)){
         	rotPlayer2 += rotationSpeed;
-			Instantiate(metalParticle, player2.transform.position, Quaternion.identity);
+            PlaySound(playerAudio);
+            Instantiate(metalParticle, player2.transform.position, Quaternion.identity);
         }
-        if (Input.GetKey(KeyCode.RightArrow)){
+        else if (Input.GetKey(KeyCode.RightArrow)){
         	rotPlayer2 -= rotationSpeed;
-			Instantiate(metalParticle, player2.transform.position, Quaternion.identity);
+            PlaySound(playerAudio);
+            Instantiate(metalParticle, player2.transform.position, Quaternion.identity);
+        }
+
+        if (!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.RightArrow)) {
+            playerAudio.Stop();
         }
         rotPlayer2 = Mathf.Clamp(rotPlayer2, 90f, 270f);
 
@@ -69,5 +80,13 @@ public class playerMovement : MonoBehaviour {
         player2.transform.eulerAngles = new Vector3(0f, 0f, rotPlayer2);
         player2.transform.position = new Vector3(0f, 0f, 0f);
         player2.transform.Translate(new Vector3(-1.3f, 0f, 0f));
+    }
+
+    void PlaySound(AudioSource audioSource)
+    {
+        if (!audioSource.isPlaying)
+        {
+            audioSource.Play();
+        }
     }
 }
