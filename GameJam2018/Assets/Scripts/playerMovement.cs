@@ -8,6 +8,8 @@ public class playerMovement : MonoBehaviour {
     public float rotPlayer2;
     public float rotationSpeed = 1f;
     GameObject player1, player2;
+
+    private GameObject metalParticle;
     // Use this for initialization
     void Start () {
         player1 = transform.Find("player1").gameObject;
@@ -15,6 +17,8 @@ public class playerMovement : MonoBehaviour {
 
         rotPlayer1 = 0f;
         rotPlayer2 = 180f;
+
+		metalParticle = GameObject.Find("MetalParticle");
 	}
 
 	void Update(){
@@ -35,13 +39,25 @@ public class playerMovement : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
         //player1 rotation
-        if (Input.GetKey(KeyCode.A)) rotPlayer1+= rotationSpeed;
-        if (Input.GetKey(KeyCode.D)) rotPlayer1-= rotationSpeed;
+        if (Input.GetKey(KeyCode.A)){
+        	rotPlayer1+= rotationSpeed;
+			Instantiate(metalParticle, player1.transform.position, Quaternion.identity);
+        }
+        if (Input.GetKey(KeyCode.D)){
+        	rotPlayer1-= rotationSpeed;
+			Instantiate(metalParticle, player1.transform.position, Quaternion.identity);
+        }
         rotPlayer1 = Mathf.Clamp(rotPlayer1, -90f, 90f);
 
         //player2 rotation
-        if (Input.GetKey(KeyCode.LeftArrow)) rotPlayer2 += rotationSpeed;
-        if (Input.GetKey(KeyCode.RightArrow)) rotPlayer2 -= rotationSpeed;
+        if (Input.GetKey(KeyCode.LeftArrow)){
+        	rotPlayer2 += rotationSpeed;
+			Instantiate(metalParticle, player2.transform.position, Quaternion.identity);
+        }
+        if (Input.GetKey(KeyCode.RightArrow)){
+        	rotPlayer2 -= rotationSpeed;
+			Instantiate(metalParticle, player2.transform.position, Quaternion.identity);
+        }
         rotPlayer2 = Mathf.Clamp(rotPlayer2, 90f, 270f);
 
         //changes the rotation and position of player1
