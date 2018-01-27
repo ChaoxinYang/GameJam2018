@@ -28,9 +28,22 @@ public class Weapon : MonoBehaviour
     public void Fire()
     {
         if (canShoot == true)
-        {
+        {	
+        	string ammoToShoot = null;
             canShoot = false;
-            GameObject newBullet = ObjectPool.objectPool.GetPooledObjct("Bullet", true);
+            if(weaponState == 0){
+
+            ammoToShoot = "Bullet";
+
+            }
+
+            if(weaponState == 1){
+
+
+            ammoToShoot = "Rocket";
+            }
+
+            GameObject newBullet = ObjectPool.objectPool.GetPooledObjct(ammoToShoot, true);
             newBullet.SetActive(true);
             newBullet.transform.position = gameObject.transform.position;
             newBullet.transform.rotation = transform.rotation * Quaternion.Euler(new Vector3(0, 0, Random.Range(-5f, 5f)));

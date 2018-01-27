@@ -26,7 +26,13 @@ public class EnemyCollision : MonoBehaviour {
 		//gameObject.SetActive(false);
 		if(coll.gameObject.CompareTag("Bullet")){
 			enemyHealth -= 5;
-		}else{
+		}
+		else if(coll.gameObject.CompareTag("Rocket")){
+			enemyHealth -=10;
+		}
+
+
+		else{
 			healthScript.Damage(100);
 			gameObject.SetActive(false);
 		}
