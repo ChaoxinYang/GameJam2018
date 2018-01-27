@@ -5,6 +5,7 @@ using UnityEngine;
 public class WeaponSwitch : MonoBehaviour
 {
     public bool isSwitching, doneSwitching;
+    public int switchSpeed;
     private Vector3 leftPosition, rightPosition;
     public Weapon leftWeapon, rightWeapon;
     public Sprite weaponSprite0, weaponSprite1;
@@ -29,13 +30,13 @@ public class WeaponSwitch : MonoBehaviour
         {
             if (doneSwitching == false)
             {
-                leftWeapon.gameObject.transform.position = Vector3.MoveTowards(leftWeapon.gameObject.transform.position, transform.position, Time.deltaTime);
-                rightWeapon.gameObject.transform.position = Vector3.MoveTowards(rightWeapon.gameObject.transform.position, transform.position, Time.deltaTime);
+                leftWeapon.gameObject.transform.position = Vector3.MoveTowards(leftWeapon.gameObject.transform.position, transform.position, Time.deltaTime * switchSpeed);
+                rightWeapon.gameObject.transform.position = Vector3.MoveTowards(rightWeapon.gameObject.transform.position, transform.position, Time.deltaTime * switchSpeed);
             }
             else
             {
-                leftWeapon.gameObject.transform.position = Vector3.MoveTowards(leftWeapon.gameObject.transform.position, leftPosition, Time.deltaTime);
-                rightWeapon.gameObject.transform.position = Vector3.MoveTowards(rightWeapon.gameObject.transform.position, rightPosition, Time.deltaTime);
+                leftWeapon.gameObject.transform.position = Vector3.MoveTowards(leftWeapon.gameObject.transform.position, leftPosition, Time.deltaTime * switchSpeed);
+                rightWeapon.gameObject.transform.position = Vector3.MoveTowards(rightWeapon.gameObject.transform.position, rightPosition, Time.deltaTime * switchSpeed);
             }
         }
 
