@@ -8,8 +8,10 @@ public class EnemyCollision : MonoBehaviour {
 	public float enemyHealth = 10f;
 
 	private ScoreKeeper scoreKeeper;
-	// Use this for initialization
-	void Start () {
+    private Animator shipAnimator;
+
+    // Use this for initialization
+    void Start () {
 		healthScript = GameObject.Find("Health").GetComponent<HealthScript>();
 		scoreKeeper = GameObject.Find("Score").GetComponent<ScoreKeeper>();
 	}
@@ -26,15 +28,18 @@ public class EnemyCollision : MonoBehaviour {
 		//gameObject.SetActive(false);
 		if(coll.gameObject.CompareTag("Bullet")){
 			enemyHealth -= 5;
-		}
-		else if(coll.gameObject.CompareTag("Rocket")){
-			enemyHealth -=10;
-		}
-
-
-		else{
-			healthScript.Damage(100);
+		}else{
+            shipAnimator = coll.gameObject.GetComponent<Animator>();
+            StartCoroutine("ShipShake");
+            healthScript.Damage(100);
 			gameObject.SetActive(false);
 		}
 	}
+
+    IEnumerator ShipShake()
+    {
+        shipAnimator.SetBool("takingDamage", true);
+        yield return new WaitForSeconds(12.0f);
+        shipAnimator.SetBool("takingDamage", false);
+    }
 }

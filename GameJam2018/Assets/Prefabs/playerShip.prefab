@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 50737153728881900}
   - component: {fileID: 58066549168293890}
   - component: {fileID: 114525686059523068}
+  - component: {fileID: 95261976414235146}
   m_Layer: 0
   m_Name: playerShip
   m_TagString: PlayerShip
@@ -141,6 +142,23 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.28
+--- !u!95 &95261976414235146
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1577366077304994}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114243407754693386
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -154,8 +172,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponState: 0
   bulletSpeed: 1000
-  weaponCooldown: 0.1
-  bullet: {fileID: 0}
 --- !u!114 &114396066721235924
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -181,6 +197,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b650c3046b18acc449366cad8ee1c4aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSwitching: 0
+  doneSwitching: 0
   leftWeapon: {fileID: 114243407754693386}
   rightWeapon: {fileID: 114728607992507994}
   weaponSprite0: {fileID: 21300000, guid: 14ca26bf636e6f644bab2fb9e945f164, type: 3}
@@ -198,8 +216,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponState: 1
   bulletSpeed: 1000
-  weaponCooldown: 0.5
-  bullet: {fileID: 0}
 --- !u!212 &212170062167555626
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -209,7 +225,6 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -225,7 +240,6 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -253,7 +267,6 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -269,7 +282,6 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -297,7 +309,6 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -313,7 +324,6 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
