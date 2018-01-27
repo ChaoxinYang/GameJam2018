@@ -10,10 +10,17 @@ public class EnemyCollision : MonoBehaviour {
 	private ScoreKeeper scoreKeeper;
     private Animator shipAnimator;
 
+    private GameObject CollRed;
+    private GameObject CollOrange;
+    private GameObject CollYellow;
+
     // Use this for initialization
     void Start () {
 		healthScript = GameObject.Find("Health").GetComponent<HealthScript>();
 		scoreKeeper = GameObject.Find("Score").GetComponent<ScoreKeeper>();
+		CollRed = GameObject.Find("PS-Red");
+		CollOrange = GameObject.Find("PS-Orange");
+		CollYellow = GameObject.Find("PS-Yellow");
 	}
 	
 	// Update is called once per frame
@@ -33,6 +40,9 @@ public class EnemyCollision : MonoBehaviour {
             StartCoroutine("ShipShake");
             healthScript.Damage(100);
 			gameObject.SetActive(false);
+			Instantiate(CollRed, transform.position, Quaternion.identity);
+			Instantiate(CollOrange, transform.position, Quaternion.identity);
+			Instantiate(CollYellow, transform.position, Quaternion.identity);
 		}
 	}
 
