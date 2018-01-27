@@ -140,7 +140,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.335, y: 0.8924767}
   m_AnchorMax: {x: 0.58778894, y: 1}
-  m_AnchoredPosition: {x: 0.8409996, y: 0.2000122}
+  m_AnchoredPosition: {x: 0.8410034, y: 0.2000122}
   m_SizeDelta: {x: 0.40599823, y: -1.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1353807
@@ -323,7 +323,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1577245194
+  randomSeed: -1368151767
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -4141,7 +4141,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1608094567
+  randomSeed: 1212223532
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -7490,7 +7490,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1827254504
+  randomSeed: -1916463606
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -10746,7 +10746,7 @@ GameObject:
   - component: {fileID: 1230921255}
   - component: {fileID: 1230921254}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: p2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10767,7 +10767,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 130.1, y: 0}
+  m_AnchoredPosition: {x: 130.1, y: 57.600006}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1230921254
@@ -10882,6 +10882,42 @@ Prefab:
         type: 2}
       propertyPath: m_Volume
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4196230440517520, guid: 23ffe72600a8062419db349c7faa0103, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4196230440517520, guid: 23ffe72600a8062419db349c7faa0103, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4196230440517520, guid: 23ffe72600a8062419db349c7faa0103, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4879049722073726, guid: 23ffe72600a8062419db349c7faa0103, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4420295469039138, guid: 23ffe72600a8062419db349c7faa0103, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4879049722073726, guid: 23ffe72600a8062419db349c7faa0103, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4420295469039138, guid: 23ffe72600a8062419db349c7faa0103, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4879049722073726, guid: 23ffe72600a8062419db349c7faa0103, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4420295469039138, guid: 23ffe72600a8062419db349c7faa0103, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 23ffe72600a8062419db349c7faa0103, type: 2}
@@ -11045,7 +11081,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 2003640212
+  randomSeed: -281614027
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -14272,7 +14308,7 @@ GameObject:
   - component: {fileID: 1820482409}
   - component: {fileID: 1820482408}
   m_Layer: 5
-  m_Name: Text
+  m_Name: p1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14293,7 +14329,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 57.6}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1820482408

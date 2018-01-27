@@ -6,11 +6,12 @@ public class enemyBehaviour : MonoBehaviour
 {
 
 
-    public enum EnemyType { Suicider };
+    public enum EnemyType { Suicider , AttackShip};
 
     public EnemyType enemyType;
     [Header("Enemy attributes")]
     public float enemySpeed;
+    public float range;
 
     GameObject playerShip;
     GameObject target;
@@ -23,18 +24,25 @@ public class enemyBehaviour : MonoBehaviour
         playerShip = GameObject.FindGameObjectWithTag("PlayerShip");
         rb = GetComponent<Rigidbody2D>();
 
-        SuiciderStateStart();
+        if (enemyType == EnemyType.Suicider) SuiciderStateStart();
+        else if (enemyType == EnemyType.AttackShip) AttackShipStateStart();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        SuiciderState();
+        if (enemyType == EnemyType.Suicider) SuiciderState();
+        else if (enemyType == EnemyType.AttackShip) AttackShipState();
     }
 
+    void AttackShipStateStart()
+    {
+        enemySpeed = 2;
+        range = 8;
+    }
     void SuiciderStateStart()
-    {  
-        enemySpeed = 2f;
+    {
+        enemySpeed = 2;
     }
 
     void SuiciderState()
@@ -45,5 +53,22 @@ public class enemyBehaviour : MonoBehaviour
         transform.rotation = enemyRotation;
 
         rb.velocity = enemyDir * enemySpeed;
+    }
+
+    void AttackShipState()
+    {
+        if(Vector2.Distance(playerShip.transform.position, transform.position) > range)
+        {
+            Vector2 enemyDir = playerShip.transform.position - transform.position;
+            enemyDir.Normalize();
+            Quaternion enemyRotation = Quaternion.FromToRotation(Vector2.up, enemyDir);
+            transform.rotation = enemyRotation;
+
+            rb.velocity = enemyDir * enemySpeed;
+        } else
+        {
+            rb.velocity = Vector2.zero;
+            transform.RotateAround(playerShip.transform.position, Vector3.forward, enemySpeed /4);
+        }
     }
 }
