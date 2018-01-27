@@ -34,7 +34,6 @@ public class WeaponSwitch : MonoBehaviour
             }
             else
             {
-                Debug.Log("Hier moet");
                 leftWeapon.gameObject.transform.position = Vector3.MoveTowards(leftWeapon.gameObject.transform.position, leftPosition, Time.deltaTime);
                 rightWeapon.gameObject.transform.position = Vector3.MoveTowards(rightWeapon.gameObject.transform.position, rightPosition, Time.deltaTime);
             }
