@@ -22,8 +22,8 @@ public class HealthScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(currenthealth <= 0){
-			string currentScene = SceneManager.GetActiveScene().name;
-			SceneManager.LoadScene(currentScene);
+			//string currentScene = SceneManager.GetActiveScene().name;
+			SceneManager.LoadScene("GameOver");
 			ScoreKeeper.Reset();
 		}
 		if(Input.GetKeyDown(KeyCode.F)){
