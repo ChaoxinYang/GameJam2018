@@ -59,7 +59,8 @@ MonoBehaviour:
   - {fileID: 1806847619866650, guid: 2aabbce9c9092684fbe20992320d449e, type: 2}
   - {fileID: 1094236315119152, guid: 4f75ecb7425df90488c293566752b267, type: 2}
   - {fileID: 1794369857286722, guid: c00feae8c8f77f143b37248df113ff65, type: 2}
-  pooledAmount: 010000000100000032000000140000000100000001000000
+  - {fileID: 1347697054230058, guid: 00200eadb680d6d42a38a7aca8bc25de, type: 2}
+  pooledAmount: 01000000010000003200000014000000010000000100000001000000
 --- !u!114 &114770166995055890
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -80,12 +81,14 @@ MonoBehaviour:
     waveSpawnPoint: {x: 1, y: 1}
   - waveToSpawn: Formation4
     waveSpawnPoint: {x: 1, y: 1}
-  FormationSpawnOrder: 0000000001000000020000000300000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  - waveToSpawn: Formation5
+    waveSpawnPoint: {x: 1, y: 1}
+  FormationSpawnOrder: 000000000100000002000000030000000400000004000000
   currentWave: 0
   formationsInWave: 1
-  interVal: 5
+  interVal: 2
   interValDecrease: 0.3
   interValLimit: 2
-  waveSpawnInterVal: 4
+  waveSpawnInterVal: 2
   WaveSpawnInterValDecrease: 0.005
   waveSpawnInterValLimit: 0.5

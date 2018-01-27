@@ -8,6 +8,7 @@ public class EnemyCollision : MonoBehaviour {
 	public float enemyHealth = 10f;
 
 	private ScoreKeeper scoreKeeper;
+
     private Animator shipAnimator;
 
     private GameObject CollRed;
@@ -18,6 +19,7 @@ public class EnemyCollision : MonoBehaviour {
     void Start () {
 		healthScript = GameObject.Find("Health").GetComponent<HealthScript>();
 		scoreKeeper = GameObject.Find("Score").GetComponent<ScoreKeeper>();
+
 		CollRed = GameObject.Find("PS-Red");
 		CollOrange = GameObject.Find("PS-Orange");
 		CollYellow = GameObject.Find("PS-Yellow");
@@ -28,13 +30,16 @@ public class EnemyCollision : MonoBehaviour {
 		if(enemyHealth <= 0){
 			gameObject.SetActive(false);
 			scoreKeeper.Score(50);
+			Instantiate(CollRed, transform.position, Quaternion.identity);
+			Instantiate(CollOrange, transform.position, Quaternion.identity);
+			Instantiate(CollYellow, transform.position, Quaternion.identity);
 		}
 	}
 
 	void OnTriggerEnter2D(Collider2D coll){
 		//gameObject.SetActive(false);
 		if(coll.gameObject.CompareTag("Bullet")){
-			enemyHealth -= 5;
+			enemyHealth -= 3;
 		}else if(coll.gameObject.CompareTag("Rocket")){
 			enemyHealth -= 10;
 		}else{
