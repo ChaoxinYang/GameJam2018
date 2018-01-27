@@ -8,38 +8,31 @@ public class BulletCollision : MonoBehaviour
     private AudioSource[] audioSources;
     public float timer = 5;
 
-    void Start()
-    {
+    void Start(){
         scoreKeeper = GameObject.Find("Score").GetComponent<ScoreKeeper>();
     }
 
-    void OnEnable()
-    {
+    void OnEnable(){
         audioSources = gameObject.GetComponents<AudioSource>();
         audioSources[0].Play();
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update(){
         timer -= Time.deltaTime;
-        if (timer <= 0)
-        {
+        if (timer <= 0){
             gameObject.SetActive(false);
             timer = 5;
         }
 
-        if (audioSources[1].isPlaying == false && gameObject.GetComponent<SpriteRenderer>().enabled == false)
-        {
+        if (audioSources[1].isPlaying == false && gameObject.GetComponent<SpriteRenderer>().enabled == false){
             gameObject.SetActive(false);
             gameObject.GetComponent<SpriteRenderer>().enabled = true;
         }
     }
 
-    void OnTriggerEnter2D(Collider2D coll)
-    {
-        if (coll.gameObject.CompareTag("Enemy"))
-        {
+    void OnTriggerEnter2D(Collider2D coll){
+        if (coll.gameObject.CompareTag("Enemy")){
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
             gameObject.SetActive(false);
             audioSources[1].Play();

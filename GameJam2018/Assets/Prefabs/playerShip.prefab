@@ -92,7 +92,7 @@ Transform:
   m_GameObject: {fileID: 1290710793687550}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 4196230440517520}
   m_RootOrder: 0
@@ -105,7 +105,7 @@ Transform:
   m_GameObject: {fileID: 1948873540003120}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 4196230440517520}
   m_RootOrder: 1
@@ -236,7 +236,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4df154c0a977a164a9e7b1fee80f2734, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -316,7 +316,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4df154c0a977a164a9e7b1fee80f2734, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -428,7 +428,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotPlayer1: 0
   rotPlayer2: 0
-  rotationSpeed: 1
+  rotationSpeed1: 0
+  rotationSpeed2: 0
 --- !u!114 &114525686059523068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -442,10 +443,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSwitching: 0
   doneSwitching: 0
+  switchSpeed: 10
   leftWeapon: {fileID: 114243407754693386}
   rightWeapon: {fileID: 114728607992507994}
-  weaponSprite0: {fileID: 21300000, guid: 14ca26bf636e6f644bab2fb9e945f164, type: 3}
-  weaponSprite1: {fileID: 21300000, guid: a28d2f3927d6eca4996224333153920b, type: 3}
+  weaponSprite0: {fileID: 21300000, guid: 64d096ad537e0dd4b8d87898700be5a0, type: 3}
+  weaponSprite1: {fileID: 21300000, guid: 0d2e372602587054ab300df370033187, type: 3}
 --- !u!114 &114728607992507994
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -493,7 +495,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 14ca26bf636e6f644bab2fb9e945f164, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 64d096ad537e0dd4b8d87898700be5a0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -581,7 +583,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a28d2f3927d6eca4996224333153920b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0d2e372602587054ab300df370033187, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
