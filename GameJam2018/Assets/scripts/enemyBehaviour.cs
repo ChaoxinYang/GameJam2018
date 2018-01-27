@@ -10,7 +10,6 @@ public class enemyBehaviour : MonoBehaviour {
     public EnemyType enemyType;
     [Header("Enemy attributes")]
     public float enemySpeed;
-    public float enemyHealth;
     private GameObject playerShip;
 
     Rigidbody2D rb;
@@ -30,7 +29,6 @@ public class enemyBehaviour : MonoBehaviour {
     void SuiciderStateStart()
     {
         enemySpeed = 2f;
-        enemyHealth = 10f;
     }
 
     void SuiciderState()
