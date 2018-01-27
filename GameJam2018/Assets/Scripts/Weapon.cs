@@ -38,7 +38,7 @@ public class Weapon : MonoBehaviour
             }
             if (weaponState == 1)
             {
-                ammoToShoot = "Bullet";
+                ammoToShoot = "Rocket";
             }
 
             GameObject newBullet = ObjectPool.objectPool.GetPooledObjct(ammoToShoot, true);

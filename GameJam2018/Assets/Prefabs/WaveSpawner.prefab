@@ -55,7 +55,7 @@ MonoBehaviour:
   poolableGameObjects:
   - {fileID: 1840228079425078, guid: aaf4ec8987b40684689b31e0bbeb36b1, type: 2}
   - {fileID: 1145251992349522, guid: 0da16dd7ba90ab74c9121db66a4eb293, type: 2}
-  - {fileID: 1043772038336532, guid: f3b1fee2efcd4434c922179b77c7b8de, type: 2}
+  - {fileID: 1366680611285074, guid: fc4d885f08b92334c920cbcd737a2efc, type: 2}
   - {fileID: 1806847619866650, guid: 2aabbce9c9092684fbe20992320d449e, type: 2}
   pooledAmount: 01000000010000003200000014000000
 --- !u!114 &114770166995055890
