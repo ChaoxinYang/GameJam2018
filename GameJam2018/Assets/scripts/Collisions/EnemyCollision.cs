@@ -35,6 +35,8 @@ public class EnemyCollision : MonoBehaviour {
 		//gameObject.SetActive(false);
 		if(coll.gameObject.CompareTag("Bullet")){
 			enemyHealth -= 5;
+		}else if(coll.gameObject.CompareTag("Rocket")){
+			enemyHealth -= 10;
 		}else{
             shipAnimator = coll.gameObject.GetComponent<Animator>();
             shipAnimator.SetTrigger("takingDamage");
