@@ -7,6 +7,8 @@ public class Weapon : MonoBehaviour
     public int weaponState, bulletSpeed;
     private float weaponCooldown;
     private bool canShoot;
+    private string ammoToShoot;
+    private Quaternion bulletOffset;
 
     void Start()
     {
@@ -28,23 +30,24 @@ public class Weapon : MonoBehaviour
     public void Fire()
     {
         if (canShoot == true)
-        {	
-        	string ammoToShoot = null;
+        {
             canShoot = false;
 
             if (weaponState == 0)
             {
+                bulletOffset = Quaternion.Euler(new Vector3(0, 0, Random.Range(-5f, 5f)));
                 ammoToShoot = "Bullet";
             }
             if (weaponState == 1)
             {
+                bulletOffset = Quaternion.Euler(new Vector3(0, 0, 0));
                 ammoToShoot = "Rocket";
             }
 
             GameObject newBullet = ObjectPool.objectPool.GetPooledObjct(ammoToShoot, true);
             newBullet.SetActive(true);
             newBullet.transform.position = gameObject.transform.position;
-            newBullet.transform.rotation = transform.rotation * Quaternion.Euler(new Vector3(0, 0, Random.Range(-5f, 5f)));
+            newBullet.transform.rotation = transform.rotation * bulletOffset;
             newBullet.GetComponent<Rigidbody2D>().AddForce(-newBullet.transform.right * bulletSpeed);
             StartCoroutine("WeaponCooldown");
         }
