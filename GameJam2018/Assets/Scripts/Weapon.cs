@@ -31,16 +31,14 @@ public class Weapon : MonoBehaviour
         {	
         	string ammoToShoot = null;
             canShoot = false;
-            if(weaponState == 0){
 
-            ammoToShoot = "Bullet";
-
+            if (weaponState == 0)
+            {
+                ammoToShoot = "Bullet";
             }
-
-            if(weaponState == 1){
-
-
-            ammoToShoot = "Rocket";
+            if (weaponState == 1)
+            {
+                ammoToShoot = "Bullet";
             }
 
             GameObject newBullet = ObjectPool.objectPool.GetPooledObjct(ammoToShoot, true);
