@@ -36,7 +36,6 @@ public class ObjectPool : MonoBehaviour
     public GameObject GetPooledObjct(string name, bool willGrow)
     {
         string OriString = name + ("(Clone)");
-        Debug.Log(name);
         for (int i = 0; i < pooledObjects.Count; i++)
         {   
             if (!pooledObjects[i].activeInHierarchy && pooledObjects[i].name == OriString)
@@ -48,7 +47,6 @@ public class ObjectPool : MonoBehaviour
         if (willGrow)
         {
             
-            Debug.Log(name);
             GameObject obj = (GameObject)Instantiate(Resources.Load(name) as GameObject);
             pooledObjects.Add(obj);
             return obj;

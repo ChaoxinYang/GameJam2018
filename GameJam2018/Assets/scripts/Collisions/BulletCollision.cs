@@ -16,12 +16,14 @@ public class BulletCollision : MonoBehaviour {
 		timer -= Time.deltaTime;
 		if(timer <= 0){
 			gameObject.SetActive(false);
+			timer = 5;
 		}
 	}
 
 	void OnTriggerEnter2D(Collider2D coll){
 	if(coll.gameObject.CompareTag("Enemy")){
 			gameObject.SetActive(false);
+			Debug.Log("coll bullet");
 		}
 
 	}
