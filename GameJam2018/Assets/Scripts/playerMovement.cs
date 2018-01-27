@@ -110,12 +110,12 @@ public class playerMovement : MonoBehaviour {
         //changes the rotation and position of player1
         player1.transform.eulerAngles = new Vector3(0f, 0f, rotPlayer1);
         player1.transform.position = new Vector3(0f, 0f, 0f);
-        player1.transform.Translate(new Vector3(-1.3f, 0f, 0f));
+        player1.transform.Translate(new Vector3(-2.6f, 0f, 0f));
 
         //changes the rotation and position of player2
         player2.transform.eulerAngles = new Vector3(0f, 0f, rotPlayer2);
         player2.transform.position = new Vector3(0f, 0f, 0f);
-        player2.transform.Translate(new Vector3(-1.3f, 0f, 0f));
+        player2.transform.Translate(new Vector3(-2.6f, 0f, 0f));
     }
 
     void PlaySound(AudioSource audioSource)

@@ -6,7 +6,7 @@ public class BulletCollision : MonoBehaviour
 {
     private ScoreKeeper scoreKeeper;
     private AudioSource[] audioSources;
-    public float timer = 5;
+    public float timer = 0.5f;
 
     void Start(){
         scoreKeeper = GameObject.Find("Score").GetComponent<ScoreKeeper>();
@@ -22,7 +22,7 @@ public class BulletCollision : MonoBehaviour
         timer -= Time.deltaTime;
         if (timer <= 0){
             gameObject.SetActive(false);
-            timer = 5;
+            timer = 0.5f;
         }
 
         if (audioSources[1].isPlaying == false && gameObject.GetComponent<SpriteRenderer>().enabled == false){

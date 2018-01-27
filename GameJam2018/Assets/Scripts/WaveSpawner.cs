@@ -9,7 +9,7 @@ public class WaveSpawner : MonoBehaviour {
     public int currentWave, formationsInWave;
     public float interVal, interValDecrease,interValLimit, waveSpawnInterVal, WaveSpawnInterValDecrease,waveSpawnInterValLimit;
    
-    public float InterVals { get {return interVal; }set { if (interVal < interValLimit) { interVal = interValLimit; } interVal = value; }}
+    public float InterVals { get {return interVal; }set { if (interVal <= interValLimit) { interVal = interValLimit; } else interVal = value; }}
     public float WaveSpawnInterVal { get { return waveSpawnInterVal; } set
         {
             if (waveSpawnInterVal < waveSpawnInterValLimit) { waveSpawnInterVal = waveSpawnInterValLimit; }
@@ -30,9 +30,9 @@ public class WaveSpawner : MonoBehaviour {
             currentWave++;
         }
 
-        if (currentWave == FormationSpawnOrder.Length / 3) { 
-            formationsInWave++;
-        }
+        //if (currentWave == FormationSpawnOrder.Length / 3) { 
+        //    formationsInWave++;
+        //}
         WaveSpawnInterVal -= WaveSpawnInterValDecrease;
         yield return new WaitForSeconds(interVal);
         InterVals -= interValDecrease;
