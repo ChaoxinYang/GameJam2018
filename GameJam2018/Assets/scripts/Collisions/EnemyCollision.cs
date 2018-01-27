@@ -37,7 +37,7 @@ public class EnemyCollision : MonoBehaviour {
 			enemyHealth -= 5;
 		}else{
             shipAnimator = coll.gameObject.GetComponent<Animator>();
-            StartCoroutine("ShipShake");
+            shipAnimator.SetTrigger("takingDamage");
             healthScript.Damage(100);
 			gameObject.SetActive(false);
 			Instantiate(CollRed, transform.position, Quaternion.identity);
@@ -45,11 +45,4 @@ public class EnemyCollision : MonoBehaviour {
 			Instantiate(CollYellow, transform.position, Quaternion.identity);
 		}
 	}
-
-    IEnumerator ShipShake()
-    {
-        shipAnimator.SetBool("takingDamage", true);
-        yield return new WaitForSeconds(12.0f);
-        shipAnimator.SetBool("takingDamage", false);
-    }
 }
