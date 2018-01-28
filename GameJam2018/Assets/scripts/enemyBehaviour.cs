@@ -12,6 +12,11 @@ public class enemyBehaviour : MonoBehaviour
     [Header("Enemy attributes")]
     public float enemySpeed;
     public float range;
+    public float shootingSpeed;
+
+    public GameObject enemyBullet;
+
+    float timer = 0;
 
     GameObject playerShip;
     GameObject target;
@@ -39,6 +44,7 @@ public class enemyBehaviour : MonoBehaviour
     {
         enemySpeed = 2;
         range = 8;
+        shootingSpeed = 5;
     }
     void SuiciderStateStart()
     {
@@ -69,6 +75,15 @@ public class enemyBehaviour : MonoBehaviour
         {
             rb.velocity = Vector2.zero;
             transform.RotateAround(playerShip.transform.position, Vector3.forward, enemySpeed /4);
+
+            timer += Time.deltaTime;
+            if(timer >= 5)
+            {
+                Instantiate(enemyBullet, transform.position, Quaternion.FromToRotation(this.transform.position, playerShip.transform.position));
+                timer = 0;
+            }
         }
+
+        
     }
 }
