@@ -21,14 +21,14 @@ public class HealthScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(currenthealth <= 0){
-			//string currentScene = SceneManager.GetActiveScene().name;
-			SceneManager.LoadScene("Highscore");
-			ScoreKeeper.Reset();
-		}
-		if(Input.GetKeyDown(KeyCode.F)){
-			Damage(100);
-		}
+        if (currenthealth <= 0)
+        {
+            SceneManager.LoadScene("Highscore");
+        }
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Damage(100);
+        }
 	}
 
 	float calculateHealth(){
