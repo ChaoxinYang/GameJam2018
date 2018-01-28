@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.IO;
 
 public class Highscore : MonoBehaviour
@@ -63,7 +64,12 @@ public class Highscore : MonoBehaviour
         enterHighscore.SetActive(false);
     }
 
-    void UpdateHighscore()
+    public void CloseHighscore()
+    {
+        SceneManager.LoadScene("Start");
+    }
+
+    private void UpdateHighscore()
     {
         for (int i = 1; i < 11; i++)
         {
