@@ -35,6 +35,7 @@ public class BulletCollision : MonoBehaviour
         if (coll.gameObject.CompareTag("Enemy")){
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
             audioSources[1].Play();
+
         }
     }
 }

@@ -132,5 +132,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11acc4f0672278447896fa9b928f24a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuClip: {fileID: 8300000, guid: 4ceb42496094f2848b47a8d413e05b43, type: 3}
-  backgroundClip: {fileID: 8300000, guid: 6af83ad91a5183041b8ecbb52cb373d4, type: 3}
+  menuClip: {fileID: 8300000, guid: ca74b0172c2f1d940a39b29872772942, type: 3}
+  backgroundClip: {fileID: 8300000, guid: 905deccc7cc3e4b42ba68fce0347fb44, type: 3}

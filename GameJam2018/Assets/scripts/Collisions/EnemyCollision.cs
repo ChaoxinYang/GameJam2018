@@ -42,7 +42,7 @@ public class EnemyCollision : MonoBehaviour {
 			enemyHealth -= 3;
 		}else if(coll.gameObject.CompareTag("Rocket")){
 			enemyHealth -= 10;
-		}else{
+		}else if(coll.gameObject.CompareTag("PlayerShip")){
             shipAnimator = coll.gameObject.GetComponent<Animator>();
             shipAnimator.SetTrigger("takingDamage");
             healthScript.Damage(100);
