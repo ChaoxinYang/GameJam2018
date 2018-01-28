@@ -22,7 +22,7 @@ public class Highscore : MonoBehaviour {
         int oldScore, newScore;
         string oldName, newName;
         newScore = ScoreKeeper.score;
-        Debug.Log("test");
+        Debug.Log(newScore);
         newName = enterHighscore.transform.Find("PlayerOneInput").GetComponentInChildren<Text>().text + " & " + enterHighscore.transform.Find("PlayerTwoInput").GetComponentInChildren<Text>().text;
         Debug.Log("test2");
         for (int i = 0; i < 10; i++)

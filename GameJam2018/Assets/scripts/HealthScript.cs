@@ -23,7 +23,7 @@ public class HealthScript : MonoBehaviour {
 	void Update () {
 		if(currenthealth <= 0){
 			//string currentScene = SceneManager.GetActiveScene().name;
-			SceneManager.LoadScene("GameOver");
+			SceneManager.LoadScene("Highscore");
 			ScoreKeeper.Reset();
 		}
 		if(Input.GetKeyDown(KeyCode.F)){
