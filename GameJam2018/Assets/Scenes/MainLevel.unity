@@ -3973,6 +3973,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114044037616434924, guid: babe3ffff7f749e428696d9342012851,
+        type: 2}
+      propertyPath: poolableGameObjects.Array.data[6]
+      value: 
+      objectReference: {fileID: 1416297702991712, guid: 00200eadb680d6d42a38a7aca8bc25de,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: babe3ffff7f749e428696d9342012851, type: 2}
   m_IsPrefabParent: 0
@@ -14500,7 +14506,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.41700003, y: 0.58812386}
   m_AnchorMax: {x: 0.4496318, y: 0.64413327}
-  m_AnchoredPosition: {x: 0.20000076, y: 0.8999939}
+  m_AnchoredPosition: {x: 0.19999695, y: 0.8999939}
   m_SizeDelta: {x: 1.9099998, y: 0}
   m_Pivot: {x: 0.49999994, y: 0.5}
 --- !u!114 &1820482408
