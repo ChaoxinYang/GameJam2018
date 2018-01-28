@@ -93,7 +93,7 @@ MonoBehaviour:
     waveSpawnPoint: {x: 1, y: 1}
   - waveToSpawn: Formation8
     waveSpawnPoint: {x: 1, y: 1}
-  FormationSpawnOrder: 00000000010000000200000003000000040000000500000006000000070000000200000002000000
+  FormationSpawnOrder: 0000000001000000020000000300000004000000050000000600000007000000020000000200000006000000
   currentWave: 0
   formationsInWave: 1
   interVal: 3.5
