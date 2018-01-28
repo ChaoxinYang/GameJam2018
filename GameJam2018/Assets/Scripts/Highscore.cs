@@ -4,28 +4,39 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
 
-public class Highscore : MonoBehaviour {
+public class Highscore : MonoBehaviour
+{
     public GameObject highscoreList, enterHighscore;
     private Text highscoreListText, enterHighscoreScore;
 
-    void Start () {
+    void Start()
+    {
         highscoreListText = highscoreList.transform.Find("Scores").GetComponent<Text>();
         enterHighscoreScore = enterHighscore.transform.Find("Score").GetComponent<Text>();
         highscoreListText.text = null;
         enterHighscoreScore.text = ScoreKeeper.score.ToString();
-        UpdateHighscore();
         highscoreList.SetActive(false);
-	}
+    }
+
+    /*
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            PlayerPrefs.DeleteAll();
+            highscoreListText.text = null;
+            UpdateHighscore();
+        }
+    }
+    */
 
     public void WriteHighscore()
     {
         int oldScore, newScore;
         string oldName, newName;
         newScore = ScoreKeeper.score;
-        Debug.Log(newScore);
         newName = enterHighscore.transform.Find("PlayerOneInput").GetComponentInChildren<Text>().text + " & " + enterHighscore.transform.Find("PlayerTwoInput").GetComponentInChildren<Text>().text;
-        Debug.Log("test2");
-        for (int i = 0; i < 10; i++)
+        for (int i = 1; i < 11; i++)
         {
             if (PlayerPrefs.HasKey("HighscoreScore_" + i.ToString()))
             {
@@ -43,29 +54,20 @@ public class Highscore : MonoBehaviour {
             {
                 PlayerPrefs.SetInt("HighscoreScore_" + i.ToString(), newScore);
                 PlayerPrefs.SetString("HighscoreName_" + i.ToString(), newName);
-                newScore = 0;
-                newName = "Player One & Player Two";
+                break;
             }
         }
         PlayerPrefs.Save();
         UpdateHighscore();
-        enterHighscore.SetActive(false);
         highscoreList.SetActive(true);
+        enterHighscore.SetActive(false);
     }
 
     void UpdateHighscore()
     {
-        for (int i = 0; i < 10; i++)
+        for (int i = 1; i < 11; i++)
         {
-
-            if (PlayerPrefs.HasKey("HighscoreScore_" + i.ToString()))
-            {
-                highscoreListText.text += i.ToString("00") + ". " + PlayerPrefs.GetInt("HighscoreScore_" + i.ToString()) + " " + PlayerPrefs.GetString("HighscoreName_" + i.ToString()) + "\n";
-            }
-            else
-            {
-                highscoreListText.text += i.ToString("00") + ". " + "\n";
-            }
+            highscoreListText.text += i.ToString("00") + ". " + PlayerPrefs.GetInt("HighscoreScore_" + i.ToString(), 0) + " " + PlayerPrefs.GetString("HighscoreName_" + i.ToString(), null) + "\n";
         }
     }
 }
