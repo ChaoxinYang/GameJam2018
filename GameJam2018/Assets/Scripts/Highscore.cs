@@ -36,7 +36,7 @@ public class Highscore : MonoBehaviour
         string oldName, newName;
         newScore = ScoreKeeper.score;
         newName = enterHighscore.transform.Find("PlayerOneInput").GetComponentInChildren<Text>().text + " & " + enterHighscore.transform.Find("PlayerTwoInput").GetComponentInChildren<Text>().text;
-        for (int i = 0; i < 10; i++)
+        for (int i = 1; i < 11; i++)
         {
             if (PlayerPrefs.HasKey("HighscoreScore_" + i.ToString()))
             {
@@ -65,7 +65,7 @@ public class Highscore : MonoBehaviour
 
     void UpdateHighscore()
     {
-        for (int i = 0; i < 10; i++)
+        for (int i = 1; i < 11; i++)
         {
             highscoreListText.text += i.ToString("00") + ". " + PlayerPrefs.GetInt("HighscoreScore_" + i.ToString(), 0) + " " + PlayerPrefs.GetString("HighscoreName_" + i.ToString(), null) + "\n";
         }
