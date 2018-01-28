@@ -601,7 +601,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.021709442, y: -0.08881223}
+  m_Offset: {x: 0.015003681, y: 0.5225856}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -612,7 +612,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.716713, y: 3.6210077}
+  m_Size: {x: 5.1512403, y: 4.0417476}
   m_EdgeRadius: 0
 --- !u!61 &61094292584647100
 BoxCollider2D:
@@ -701,7 +701,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.021709442, y: -0.08881223}
+  m_Offset: {x: 0.015003681, y: 0.5225856}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -712,7 +712,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.716713, y: 3.6210077}
+  m_Size: {x: 5.1512403, y: 4.0417476}
   m_EdgeRadius: 0
 --- !u!61 &61767154231514926
 BoxCollider2D:
@@ -726,7 +726,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.021709442, y: -0.08881223}
+  m_Offset: {x: 0.015003681, y: 0.5225856}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -737,7 +737,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.716713, y: 3.6210077}
+  m_Size: {x: 5.1512403, y: 4.0417476}
   m_EdgeRadius: 0
 --- !u!61 &61767643551492632
 BoxCollider2D:
@@ -776,7 +776,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.021709442, y: -0.08881223}
+  m_Offset: {x: 0.015003681, y: 0.5225856}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -787,7 +787,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.716713, y: 3.6210077}
+  m_Size: {x: 5.1512403, y: 4.0417476}
   m_EdgeRadius: 0
 --- !u!61 &61880992365069628
 BoxCollider2D:
@@ -801,7 +801,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.021709442, y: -0.08881223}
+  m_Offset: {x: 0.015003681, y: 0.5225856}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -812,7 +812,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.716713, y: 3.6210077}
+  m_Size: {x: 5.1512403, y: 4.0417476}
   m_EdgeRadius: 0
 --- !u!61 &61924944893356352
 BoxCollider2D:
@@ -826,7 +826,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.021709442, y: -0.08881223}
+  m_Offset: {x: 0.015003681, y: 0.5225856}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -837,7 +837,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.716713, y: 3.6210077}
+  m_Size: {x: 5.1512403, y: 4.0417476}
   m_EdgeRadius: 0
 --- !u!82 &82023347177368842
 AudioSource:
@@ -1653,6 +1653,8 @@ MonoBehaviour:
   enemyType: 1
   enemySpeed: 4
   range: 0
+  shootingSpeed: 0
+  enemyBullet: {fileID: 0}
 --- !u!114 &114368046844023976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1679,6 +1681,8 @@ MonoBehaviour:
   enemyType: 1
   enemySpeed: 4
   range: 0
+  shootingSpeed: 0
+  enemyBullet: {fileID: 0}
 --- !u!114 &114382130489559796
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1693,6 +1697,8 @@ MonoBehaviour:
   enemyType: 0
   enemySpeed: 4
   range: 0
+  shootingSpeed: 0
+  enemyBullet: {fileID: 0}
 --- !u!114 &114403293064459078
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1719,6 +1725,8 @@ MonoBehaviour:
   enemyType: 0
   enemySpeed: 4
   range: 0
+  shootingSpeed: 0
+  enemyBullet: {fileID: 0}
 --- !u!114 &114538218763170704
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1745,6 +1753,8 @@ MonoBehaviour:
   enemyType: 1
   enemySpeed: 4
   range: 0
+  shootingSpeed: 0
+  enemyBullet: {fileID: 0}
 --- !u!114 &114597821595778910
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1771,6 +1781,8 @@ MonoBehaviour:
   enemyType: 1
   enemySpeed: 4
   range: 0
+  shootingSpeed: 0
+  enemyBullet: {fileID: 0}
 --- !u!114 &114640669610855150
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1797,6 +1809,8 @@ MonoBehaviour:
   enemyType: 1
   enemySpeed: 4
   range: 0
+  shootingSpeed: 0
+  enemyBullet: {fileID: 0}
 --- !u!114 &114692196977791384
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1811,6 +1825,8 @@ MonoBehaviour:
   enemyType: 0
   enemySpeed: 4
   range: 0
+  shootingSpeed: 0
+  enemyBullet: {fileID: 0}
 --- !u!114 &114703301332416856
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1837,6 +1853,8 @@ MonoBehaviour:
   enemyType: 1
   enemySpeed: 4
   range: 0
+  shootingSpeed: 0
+  enemyBullet: {fileID: 0}
 --- !u!114 &114751889522951874
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1851,6 +1869,8 @@ MonoBehaviour:
   enemyType: 0
   enemySpeed: 4
   range: 0
+  shootingSpeed: 0
+  enemyBullet: {fileID: 0}
 --- !u!114 &114833656689966232
 MonoBehaviour:
   m_ObjectHideFlags: 1

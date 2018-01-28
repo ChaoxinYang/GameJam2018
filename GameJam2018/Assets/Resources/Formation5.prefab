@@ -766,7 +766,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0045723915, y: -0.08881223}
+  m_Offset: {x: 0.015003681, y: 0.5225856}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -777,7 +777,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.8880692, y: 3.6210077}
+  m_Size: {x: 5.1512403, y: 4.0417476}
   m_EdgeRadius: 0
 --- !u!61 &61725086970187376
 BoxCollider2D:
@@ -855,6 +855,8 @@ MonoBehaviour:
   enemyType: 0
   enemySpeed: 4
   range: 0
+  shootingSpeed: 0
+  enemyBullet: {fileID: 0}
 --- !u!114 &114113568416583760
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -869,6 +871,8 @@ MonoBehaviour:
   enemyType: 0
   enemySpeed: 4
   range: 0
+  shootingSpeed: 0
+  enemyBullet: {fileID: 0}
 --- !u!114 &114133709663646634
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -883,6 +887,8 @@ MonoBehaviour:
   enemyType: 0
   enemySpeed: 4
   range: 0
+  shootingSpeed: 0
+  enemyBullet: {fileID: 0}
 --- !u!114 &114143290245964186
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -897,6 +903,8 @@ MonoBehaviour:
   enemyType: 1
   enemySpeed: 4
   range: 0
+  shootingSpeed: 0
+  enemyBullet: {fileID: 0}
 --- !u!114 &114160330374940086
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -911,6 +919,8 @@ MonoBehaviour:
   enemyType: 0
   enemySpeed: 4
   range: 0
+  shootingSpeed: 0
+  enemyBullet: {fileID: 0}
 --- !u!114 &114225790007944454
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -973,6 +983,8 @@ MonoBehaviour:
   enemyType: 0
   enemySpeed: 4
   range: 0
+  shootingSpeed: 0
+  enemyBullet: {fileID: 0}
 --- !u!114 &114419756408684822
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -987,6 +999,8 @@ MonoBehaviour:
   enemyType: 0
   enemySpeed: 4
   range: 0
+  shootingSpeed: 0
+  enemyBullet: {fileID: 0}
 --- !u!114 &114480305537809630
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1061,6 +1075,8 @@ MonoBehaviour:
   enemyType: 0
   enemySpeed: 4
   range: 0
+  shootingSpeed: 0
+  enemyBullet: {fileID: 0}
 --- !u!114 &114796489653184522
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1075,6 +1091,8 @@ MonoBehaviour:
   enemyType: 0
   enemySpeed: 4
   range: 0
+  shootingSpeed: 0
+  enemyBullet: {fileID: 0}
 --- !u!114 &114901785425490906
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1089,6 +1107,8 @@ MonoBehaviour:
   enemyType: 0
   enemySpeed: 4
   range: 0
+  shootingSpeed: 0
+  enemyBullet: {fileID: 0}
 --- !u!212 &212064052561996696
 SpriteRenderer:
   m_ObjectHideFlags: 1

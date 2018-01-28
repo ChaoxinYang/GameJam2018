@@ -651,7 +651,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.021709442, y: -0.08881223}
+  m_Offset: {x: 0.015003681, y: 0.5225856}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -662,7 +662,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.716713, y: 3.6210077}
+  m_Size: {x: 5.1512403, y: 4.0417476}
   m_EdgeRadius: 0
 --- !u!61 &61393294483079424
 BoxCollider2D:
@@ -676,7 +676,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.021709442, y: -0.08881223}
+  m_Offset: {x: 0.015003681, y: 0.5225856}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -687,7 +687,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.716713, y: 3.6210077}
+  m_Size: {x: 5.1512403, y: 4.0417476}
   m_EdgeRadius: 0
 --- !u!61 &61403105102808300
 BoxCollider2D:
@@ -726,7 +726,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.021709442, y: -0.08881223}
+  m_Offset: {x: 0.015003681, y: 0.5225856}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -737,7 +737,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.716713, y: 3.6210077}
+  m_Size: {x: 5.1512403, y: 4.0417476}
   m_EdgeRadius: 0
 --- !u!61 &61750216132350524
 BoxCollider2D:
@@ -751,7 +751,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.021709442, y: -0.08881223}
+  m_Offset: {x: 0.015003681, y: 0.5225856}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -762,7 +762,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.716713, y: 3.6210077}
+  m_Size: {x: 5.1512403, y: 4.0417476}
   m_EdgeRadius: 0
 --- !u!61 &61770269492130596
 BoxCollider2D:
@@ -801,7 +801,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.021709442, y: -0.08881223}
+  m_Offset: {x: 0.015003681, y: 0.5225856}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -812,7 +812,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.716713, y: 3.6210077}
+  m_Size: {x: 5.1512403, y: 4.0417476}
   m_EdgeRadius: 0
 --- !u!61 &61955449514439004
 BoxCollider2D:
@@ -1653,6 +1653,8 @@ MonoBehaviour:
   enemyType: 1
   enemySpeed: 4
   range: 0
+  shootingSpeed: 0
+  enemyBullet: {fileID: 0}
 --- !u!114 &114076923079316088
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1691,6 +1693,8 @@ MonoBehaviour:
   enemyType: 0
   enemySpeed: 4
   range: 0
+  shootingSpeed: 0
+  enemyBullet: {fileID: 0}
 --- !u!114 &114194801669187946
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1705,6 +1709,8 @@ MonoBehaviour:
   enemyType: 1
   enemySpeed: 4
   range: 0
+  shootingSpeed: 0
+  enemyBullet: {fileID: 0}
 --- !u!114 &114332979736088026
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1719,6 +1725,8 @@ MonoBehaviour:
   enemyType: 0
   enemySpeed: 4
   range: 0
+  shootingSpeed: 0
+  enemyBullet: {fileID: 0}
 --- !u!114 &114351009821214010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1781,6 +1789,8 @@ MonoBehaviour:
   enemyType: 1
   enemySpeed: 4
   range: 0
+  shootingSpeed: 0
+  enemyBullet: {fileID: 0}
 --- !u!114 &114533949409024262
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1819,6 +1829,8 @@ MonoBehaviour:
   enemyType: 1
   enemySpeed: 4
   range: 0
+  shootingSpeed: 0
+  enemyBullet: {fileID: 0}
 --- !u!114 &114716652341447504
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1833,6 +1845,8 @@ MonoBehaviour:
   enemyType: 1
   enemySpeed: 4
   range: 0
+  shootingSpeed: 0
+  enemyBullet: {fileID: 0}
 --- !u!114 &114810382288927394
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1847,6 +1861,8 @@ MonoBehaviour:
   enemyType: 0
   enemySpeed: 4
   range: 0
+  shootingSpeed: 0
+  enemyBullet: {fileID: 0}
 --- !u!114 &114827736897914008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1873,6 +1889,8 @@ MonoBehaviour:
   enemyType: 0
   enemySpeed: 4
   range: 0
+  shootingSpeed: 0
+  enemyBullet: {fileID: 0}
 --- !u!114 &114941102394314510
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1887,6 +1905,8 @@ MonoBehaviour:
   enemyType: 0
   enemySpeed: 4
   range: 0
+  shootingSpeed: 0
+  enemyBullet: {fileID: 0}
 --- !u!114 &114961428596039992
 MonoBehaviour:
   m_ObjectHideFlags: 1
